@@ -1,0 +1,17 @@
+language: r
+cache: packages
+r:
+  - release
+
+OS:
+  - linux
+  - osx
+script:
+  # IF building packages
+  #- R CMD build .
+  #- R CMD check *.tar.gz
+
+  # IF running from an R or shell file
+  - Rscript test.R
+
+
