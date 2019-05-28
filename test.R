@@ -1,5 +1,8 @@
 library(testthat)
-source("function.R")
-expect_equal(add_nums(2, 2), 4)
-actual_size <- nrow(random_half_split(iris))
-expect_equal(actual_size, 75)
+test_that(context("Correct distribution of random numbers", {
+  x <- boxMuller(10000)
+  y <- rnorm(10000)
+  pv <- ks.test(x,y)$p.value
+  # fail to reject null hypothesis 
+  expect_equal(pv > 0.05, TRUE)
+}) 
