@@ -1,4 +1,4 @@
-Package: testing_ci_r
+Package: testingCI.R
 Type: Package
 Title: Testing out
 Version: 0.0.0.9000
