@@ -7,11 +7,5 @@ r_packages:
   - covr
   - devtools
 
-r_github_packages:
-  -r-lib/covr
-  
 script:
   - Rscript test.R
-
-after_success:
-  - Rscript -e 'covr::codecov()'
