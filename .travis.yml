@@ -3,5 +3,11 @@ cache: packages
 r:
   - release
 
+r_packages:
+  - covr
+
 script:
   - Rscript test.R
+
+after_success:
+  - Rscript -e 'library(covr); codecov()'
