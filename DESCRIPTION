@@ -5,6 +5,7 @@ Version: 0.0.0.9000
 Authors@R: person("Stefan", "Emmons", email = "stefanemmons@aol.com",
     role = c("aut", "cre"))
 Description: Testing around
+License: GNU General Public License
 LazyData: TRUE
 Imports:
     dplyr,
