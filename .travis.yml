@@ -1,5 +1,12 @@
 language: r
+sudo: true
 cache: packages
+warnings_are_errors: false
+
+env:
+  global:
+    - CODECOV_TOKEN="05f848a6-666a-430d-aef2-4ccca14126d9"
+
 r:
   - release
  
@@ -8,3 +15,12 @@ r_packages:
   
 script:
   - Rscript test.R
+
+  
+after_success:
+  - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
