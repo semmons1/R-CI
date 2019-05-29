@@ -17,4 +17,4 @@ script:
   - Rscript test.R
 
 after_success:
-  - Rscript -e 'library(covr); codecov()'
+  - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
