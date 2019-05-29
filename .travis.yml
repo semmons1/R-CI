@@ -14,7 +14,8 @@ r_packages:
   - devtools
   
 script:
-  - Rscript test.R
+  - R CMD build
+  - R CMD check
 
   
 after_success:
