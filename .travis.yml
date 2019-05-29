@@ -2,19 +2,9 @@ language: r
 cache: packages
 r:
   - release
-sudo: required
-
-env: _R_CHECK_CRAN_INCOMING_=FALSE
-
+ 
 r_packages:
-  - covr
   - devtools
   
-r_github_packages:
-  - semmons1/R-CI
-
 script:
   - Rscript test.R
-
-after_success:
-  - test $TRAVIS_R_VERSION_STRING = 'release' && Rscript -e 'covr::codecov()'
