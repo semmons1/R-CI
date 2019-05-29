@@ -8,6 +8,5 @@ Description: Testing around
 LazyData: TRUE
 Imports:
     dplyr,
-    testthat,
-    covr
+    testthat
 RoxygenNote: 6.0.1
