@@ -14,8 +14,7 @@ r_packages:
   - devtools
   
 script:
-  - Rscript zzz.R
-  - Rscript userInp.R
+  - Rscript test-userInp.R
 
   
 after_success:
